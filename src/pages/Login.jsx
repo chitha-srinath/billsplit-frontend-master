@@ -94,6 +94,7 @@ export default function LoginForm() {
     // refetch();
 
     // window.location.href = "http://localhost:5080/api/auth/google";
+  toast.success("This feature is cooking");
     return null
   }
 
