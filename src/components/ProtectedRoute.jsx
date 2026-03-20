@@ -1,9 +1,7 @@
-import { Navigate } from "react-router-dom";
-import React, { useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
-import { useApiQuery } from "../hooks/useApi";
+import { useDispatch, useSelector } from "react-redux";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { endpoints } from "../api/api";
+import { useApiQuery } from "../hooks/useApi";
 import { clearUser } from "../redux/authSlice";
 
 export default function ProtectedRoute({ children }) {

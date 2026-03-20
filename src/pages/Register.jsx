@@ -1,15 +1,13 @@
-import { useState } from "react";
 import { useFormik } from "formik";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import * as z from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
-import billsplitlogo from "../assets/billsplitlogo.svg";
-import { Link } from "react-router-dom";
 import { endpoints } from "../api/api";
+import billsplitlogo from "../assets/billsplitlogo.svg";
 import { useApiMutation } from "../hooks/useApi";
-import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { clearUser, setUser } from "../redux/authSlice";
 
 const registerSchema = z
   .object({

@@ -1,8 +1,7 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
 import axios from "axios";
-import { setUser, clearUser, setLoading } from "../redux/authSlice";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const api = axios.create({
   baseURL: import.meta.env.VITE_APP_API_URL,

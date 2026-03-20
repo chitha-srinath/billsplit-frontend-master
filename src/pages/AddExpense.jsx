@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { ArrowLeft, ChevronDown } from "lucide-react";
-import toast from "react-hot-toast";
-import EqualSplit from "../components/Equalsplit";
-import UnequalSplit from "../components/UnequalSplit";
-import PercentageSplit from "../components/PercentageSplit";
-import { useLocation, useNavigate } from "react-router-dom";
-import { postData } from "../apiService/apiservice";
-import { endpoints } from "../api/api";
 import { useMutation } from "@tanstack/react-query";
+import { ArrowLeft, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
+import { useLocation, useNavigate } from "react-router-dom";
+import { endpoints } from "../api/api";
+import { postData } from "../apiService/apiservice";
+import EqualSplit from "../components/Equalsplit";
+import PercentageSplit from "../components/PercentageSplit";
+import UnequalSplit from "../components/UnequalSplit";
 
 export default function AddExpense() {
   const [expenseName, setExpenseName] = useState("");

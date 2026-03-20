@@ -1,54 +1,7 @@
-// import React from "react";
-// import { useNavigate } from "react-router-dom";
-// import { getDatabyparams } from "../apiService/apiservice";
-// import { endpoints } from "../api/api";
-// import { useQuery } from "@tanstack/react-query";
-
-// export default function ExpensesTab({ groupId }) {
-//   const navigate = useNavigate();
-
-//   const fetchGroupExpenses = async (groupid) => {
-//     const response = await getDatabyparams(endpoints.expensesByGroupId, groupid);
-//     return response.data;
-//   };
-
-//   const { data, isLoading, error } = useQuery({
-//     queryKey: ["groupExpenses", groupId],
-//     queryFn: fetchGroupExpenses(groupId),
-//   });
-//   if (isLoading) {
-//     return <p>Loading...</p>;
-//   }
-//   return (
-//     <div className="space-y-4">
-//       {data?.length > 0 &&
-//         data?.map((expense) => (
-//           <div key={expense.id} className="flex items-center justify-between bg-white p-4 rounded-lg shadow cursor-pointer" onClick={() => navigate(`/groups/${groupId}/expense/${expense.id}`)}>
-//             <div className="flex items-center">
-//               <div className="bg-gray-200 p-2 rounded-full mr-4">🛒</div>
-//               <div>
-//                 <h3 className="font-semibold">{expense.description}</h3>
-//                 <p className="text-sm text-gray-600">{expense.date}</p>
-//               </div>
-//             </div>
-//             <div className="text-right">
-//               <p className="font-semibold">
-//                 {expense.currency} {expense.cost}
-//               </p>
-//               <p className="text-sm text-gray-600">{expense.paidBy} paid</p>
-//             </div>
-//           </div>
-//         ))}
-//     </div>
-//   );
-// }
-
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import { getDatabyparams } from "../apiService/apiservice";
-import { endpoints } from "../api/api";
 import { useQuery } from "@tanstack/react-query";
-import Loader from "./Loader";
+import { useNavigate } from "react-router-dom";
+import { endpoints } from "../api/api";
+import { getDatabyparams } from "../apiService/apiservice";
 
 export default function ExpensesTab({ groupId }) {
   const navigate = useNavigate();

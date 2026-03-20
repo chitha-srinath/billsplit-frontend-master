@@ -1,9 +1,7 @@
-import React from "react";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import { useQuery } from "@tanstack/react-query";
-import { getDatabyparams } from "../apiService/apiservice";
+import { Bar, BarChart, Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { endpoints } from "../api/api";
-import Loader from "./Loader";
+import { getDatabyparams } from "../apiService/apiservice";
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8"];
 

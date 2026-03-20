@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Loader({ size = "medium", color = "#1D4ED8" }) {
   const sizeMap = {
     small: "w-8 h-8",

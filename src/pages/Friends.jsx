@@ -1,12 +1,12 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { Search, ChevronDown, ArrowUpDown, Plus, X } from "lucide-react";
 import { debounce } from "lodash";
-import Loader from "../components/Loader";
-import { postData } from "../apiService/apiservice";
+import { ArrowUpDown, ChevronDown, Plus, Search, X } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { endpoints } from "../api/api";
+import { postData } from "../apiService/apiservice";
+import Loader from "../components/Loader";
 
 const FriendCard = ({ friend }) => (
   <div className="bg-white rounded-lg shadow-md p-4 mb-4 flex justify-between items-center">

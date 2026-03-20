@@ -1,16 +1,15 @@
-import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, Settings, ChevronUp, ChevronDown, Plus } from "lucide-react";
-import ExpensesTab from "../components/ExpensesTab";
-import ChartsTab from "../components/ChartsTab";
-import BalancesTab from "../components/BalancesTab";
-import TotalsTab from "../components/TotalsTab";
-import Loader from "../components/Loader";
-import { getDatabyparams, postData } from "../apiService/apiservice";
-import { endpoints } from "../api/api";
+import { ArrowLeft, ChevronDown, ChevronUp, Plus, Settings } from "lucide-react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
-import { groupsData } from "../data/groupsData";
+import { useNavigate, useParams } from "react-router-dom";
+import { endpoints } from "../api/api";
+import { getDatabyparams, postData } from "../apiService/apiservice";
+import BalancesTab from "../components/BalancesTab";
+import ChartsTab from "../components/ChartsTab";
+import ExpensesTab from "../components/ExpensesTab";
+import Loader from "../components/Loader";
+import TotalsTab from "../components/TotalsTab";
 
 export default function GroupDetails() {
   const { groupId } = useParams();

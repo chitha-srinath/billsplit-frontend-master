@@ -100,16 +100,13 @@
 
 // export default Home;
 
-import React from "react";
-import { Plus } from "lucide-react";
-import { PieChart, Pie, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 import { useQuery } from "@tanstack/react-query";
-import { pieChartData, barChartData } from "../commondata";
-import { Link, useNavigate } from "react-router-dom";
-import Loader from "../components/Loader";
-import { getDatabyparams, postData } from "../apiService/apiservice";
-import { endpoints } from "../api/api";
+import { Plus } from "lucide-react";
 import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { Bar, BarChart, CartesianGrid, Legend, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
+import { endpoints } from "../api/api";
+import { getDatabyparams } from "../apiService/apiservice";
 
 const fetchHomeData = async (userId) => {
   const response = await getDatabyparams(endpoints.getHomeUserData, userId);

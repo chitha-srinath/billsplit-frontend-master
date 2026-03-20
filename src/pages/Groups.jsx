@@ -1,12 +1,11 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
 import { useInfiniteQuery, useQueryClient } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
-import { Plus, Search, X, Filter, ChevronDown } from "lucide-react";
-import Loader from "../components/Loader";
-import { postData } from "../apiService/apiservice";
-import { endpoints } from "../api/api";
-import { useSelector } from "react-redux";
 import { debounce } from "lodash";
+import { ChevronDown, Filter, Plus, Search, X } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { endpoints } from "../api/api";
+import { postData } from "../apiService/apiservice";
 
 export default function Groups() {
   const [searchTerm, setSearchTerm] = useState("");

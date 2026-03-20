@@ -1,12 +1,11 @@
-import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import { Home, Users, UserPlus, Settings, Activity, LogOut, X } from "lucide-react";
-import toast from "react-hot-toast";
-import { clearUser } from "../redux/authSlice";
-import { useDispatch } from "react-redux";
-import { getData } from "../apiService/apiservice";
 import { useMutation } from "@tanstack/react-query";
+import { Activity, Home, LogOut, Settings, UserPlus, Users, X } from "lucide-react";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { NavLink, useNavigate } from "react-router-dom";
 import { endpoints } from "../api/api";
+import { getData } from "../apiService/apiservice";
+import { clearUser } from "../redux/authSlice";
 
 const navigationLinks = [
   { path: "/", label: "Home", icon: Home },

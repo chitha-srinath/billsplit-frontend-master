@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 export default function PercentageSplit({ userList, totalBill, onSplitChange }) {

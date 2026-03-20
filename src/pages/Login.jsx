@@ -1,18 +1,15 @@
-import { useState } from "react";
+import { useMutation } from "@tanstack/react-query";
 import { useFormik } from "formik";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
 import * as z from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
-import { Link } from "react-router-dom";
+import { endpoints } from "../api/api";
+import { postData } from "../apiService/apiservice";
 import billsplitlogo from "../assets/billsplitlogo.svg";
-import api, { endpoints } from "../api/api";
-import { useApiMutation } from "../hooks/useApi";
-import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { clearUser, setUser } from "../redux/authSlice";
-import toast from "react-hot-toast";
-import { useMutation, useQuery } from "@tanstack/react-query";
-import { getData, postData } from "../apiService/apiservice";
-import { AuthProvider } from "../components/AuthProvider";
+import { setUser } from "../redux/authSlice";
 
 const loginSchema = z.object({
   email: z.string().email("Invalid email address"),

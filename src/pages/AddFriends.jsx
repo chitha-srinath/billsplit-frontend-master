@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { ArrowLeft } from "lucide-react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
-import { postData } from "../apiService/apiservice";
+import { useNavigate } from "react-router-dom";
 import { endpoints } from "../api/api";
+import { postData } from "../apiService/apiservice";
 
 // const addFriend = async (friendData) => {
 // // const friends = JSON.parse(localStorage.getItem("friends") || "[]");

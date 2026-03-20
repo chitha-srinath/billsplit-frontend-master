@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
-import { useParams, useNavigate, useLocation } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowLeft, DollarSign } from "lucide-react";
+import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 // import { fetchGroupDetails } from "../data/groupsData";
-import { getDatabyparams, postData } from "../apiService/apiservice";
 import { endpoints } from "../api/api";
+import { getDatabyparams } from "../apiService/apiservice";
 import Loader from "../components/Loader";
 
 const fetchExpenseDetails = async (expenseid) => {
